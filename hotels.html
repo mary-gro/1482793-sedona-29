@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Каталог отелей - HTML Academy: Седона</title>
@@ -7,100 +7,129 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
+    <div class="content-wrapper">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <a class="main-header-logo">
+            <img src="https://via.placeholder.com/130x70" width="130" height="70" alt="Логотип Седоны">
+          </a>
+          <ul class="site-navigation">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a href="hotels.html" class="active">Гостиницы</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <header>
-      <nav>
-        <a href="index.html">
-          <img src="https://via.placeholder.com/130x70" width="130" height="70" alt="Логотип Седоны">
-        </a>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
-      </nav>
-    </header>
+      <main class="main-wrapper">
 
-    <main>
-        <section>
-            <h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
-            <!-- Фильтр гостиниц -->
+        <section class="hotels-filter">
+          <h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
+          <!-- Фильтр гостиниц -->
         </section>
-        <section>
-            <h2 class="visually-hidden">Сортировка найденных гостиниц</h2>
-            <p>Найдено: 3</p>
-            <p>Сортировка</p>
-            <ul>
-                <li><button type="button">По цене</button></li>
-                <li><button type="button">По типу</button></li>
-                <li><button type="button">По рейтингу</button></li>
-            </ul>
-            <ul>
-                <li><button type="button">По возрастанию</button></li>
-                <li><button type="button">По убыванию</button></li>
-            </ul>
-        </section>
-        <section>
-            <h2 class="visually-hidden">Найденные гостиницы</h2>
-            <article>
-                <div><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Amara Resort & Spa"></div>
-                <h3><a href="#">Amara Resort & Spa</a></h3>
-                <p>Гостиница</p>
-                <p>От 4000 Р.</p>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
-                <p>Рейтинг: 8,5</p>
-                <div>
-                  <span></span><span></span><span></span><span></span>
-                </div>
-            </article>
-            <article>
-                <div><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Desert Quail Inn"></div>
-                <h3><a href="#">Desert Quail Inn</a></h3>
-                <p>Мотель</p>
-                <p>От 3000 Р.</p>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
-                <p>Рейтинг: 8,9</p>
-                <div>
-                  <span></span><span></span><span></span>
-                </div>
-            </article>
-            <article>
-                <div><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Amara Resort & Spa"></div>
-                <h3><a href="#">Villas at Poco Diablo</a></h3>
-                <p>Апартаменты</p>
-                <p>От 2000 Р.</p>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
-                <p>Рейтинг: 9,2</p>
-                <div>
-                  <span></span><span></span>
-                </div>
-            </article>
-        </section>
-    </main>
 
-    <footer>
-        <section>
-          <h2 class="visually-hidden">Контакты</h2>
-          <p>#visitSEDONA</p>
-          <p>ТЕЛ: +7(495) 666-01-66</p>
-        </section>
-        <section>
-          <h2 class="visually-hidden">Социальные сети</h2>
+        <section class="hotels-sorting">
+          <h2 class="visually-hidden">Сортировка найденных гостиниц</h2>
+          <p class="sorting-found">Найдено: 3</p>
+          <p class="sorting-title">Сортировка</p>
           <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Youtube</a></li>
+            <li><button type="button" class="sorting-price active">По цене</button></li>
+            <li><button type="button" class="sorting-type">По типу</button></li>
+            <li><button type="button" class="sorting-rating">По рейтингу</button></li>
+          </ul>
+          <ul>
+            <li><button type="button" class="sorting-up">По возрастанию</button></li>
+            <li><button type="button" class="sorting-down active">По убыванию</button></li>
           </ul>
         </section>
-        <p>
+
+        <section class="hotels-list">
+          <h2 class="visually-hidden">Найденные гостиницы</h2>
+          <article class="hotel-item">
+            <div class="hotel-image"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Amara Resort & Spa"></div>
+            <h3><a href="#">Amara Resort & Spa</a></h3>
+            <div class="hotel-description">
+              <p>Гостиница</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="hotel-booking">
+              <p>От 4000 Р.</p>
+              <a href="#">Забронировать</a>
+            </div>
+            <div class="hotel-rating">
+              <div class="guest-rating">
+                <span>Рейтинг: 8,5</span>
+              </div>
+              <div class="stars-rating">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+          <article class="hotel-item">
+            <div class="hotel-image"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Desert Quail Inn"></div>
+            <h3><a href="#">Desert Quail Inn</a></h3>
+            <div class="hotel-description">
+              <p>Мотель</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="hotel-booking">
+              <p>От 3000 Р.</p>
+              <a href="#">Забронировать</a>
+            </div>
+            <div class="hotel-rating">
+              <div class="guest-rating">
+                <span>Рейтинг: 8,9</span>
+              </div>
+              <div class="stars-rating">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+          <article class="hotel-item">
+            <div class="hotel-image"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Amara Resort & Spa"></div>
+            <h3><a href="#">Villas at Poco Diablo</a></h3>
+            <div class="hotel-description">
+              <p>Апартаменты</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="hotel-booking">
+              <p>От 2000 Р.</p>
+              <a href="#">Забронировать</a>
+            </div>
+            <div class="hotel-rating">
+              <div class="guest-rating">
+                <span>Рейтинг: 8,5</span>
+              </div>
+              <div class="stars-rating">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="main-footer">
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="footer-hashtag">#visitSEDONA</p>
+          <p class="footer-phone">ТЕЛ: +7(495) 666-01-66</p>
+        </section>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social-buttons">
+            <li><a class="social-button" href="#">Twitter</a></li>
+            <li><a class="social-button" href="#">Facebook</a></li>
+            <li><a class="social-button" href="#">Youtube</a></li>
+          </ul>
+        </section>
+        <p class="footer-copyright">
           <span>Website by</span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/115x40" width="115" height="40" alt="Логотип HTML Academy"></a>
+          <a class="logo-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </p>
       </footer>
-    </body>
-    </html>
+    </div>
+  </body>
+</html>

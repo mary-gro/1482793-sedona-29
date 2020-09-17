@@ -25,7 +25,6 @@
 /* Global */
 
 body {
-  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -37,13 +36,20 @@ body {
   background-color: var(--basic-lighter);
 }
 
-a {
+.page a {
   text-decoration: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.content-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  background-color: var(--basic-white);
 }
 
 /* Header */
@@ -79,8 +85,15 @@ img {
 
 /* Main */
 
-.wrapper {
+.main-wrapper {
   background-color: var(--basic-white);
+}
+
+.welcome-section {
+  background-image: url("");
+  background-color: var(--darkest-blue);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .advantages-header {
