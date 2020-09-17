@@ -19,7 +19,7 @@
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
-            <li><a href="hotels.html" class="active">Гостиницы</a></li>
+            <li><a href="hotels.html" class="current">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -34,15 +34,15 @@
         <section class="hotels-sorting">
           <h2 class="visually-hidden">Сортировка найденных гостиниц</h2>
           <p class="sorting-found">Найдено: 3</p>
-          <p class="sorting-title">Сортировка</p>
-          <ul>
-            <li><button type="button" class="sorting-price active">По цене</button></li>
-            <li><button type="button" class="sorting-type">По типу</button></li>
-            <li><button type="button" class="sorting-rating">По рейтингу</button></li>
+          <p class="sorting-title">Сортировка:</p>
+          <ul class="sorting-list">
+            <li><button type="button" class="current">По цене</button></li>
+            <li><button type="button">По типу</button></li>
+            <li><button type="button">По рейтингу</button></li>
           </ul>
-          <ul>
-            <li><button type="button" class="sorting-up">По возрастанию</button></li>
-            <li><button type="button" class="sorting-down active">По убыванию</button></li>
+          <ul class="sorting-order">
+            <li><button type="button">По возрастанию</button></li>
+            <li><button type="button" class="current">По убыванию</button></li>
           </ul>
         </section>
 
@@ -50,7 +50,7 @@
           <h2 class="visually-hidden">Найденные гостиницы</h2>
           <article class="hotel-item">
             <div class="hotel-image"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Amara Resort & Spa"></div>
-            <h3><a href="#">Amara Resort & Spa</a></h3>
+            <h3 class="hotel-name"><a href="#">Amara Resort & Spa</a></h3>
             <div class="hotel-description">
               <p>Гостиница</p>
               <a href="#">Подробнее</a>
@@ -70,7 +70,7 @@
           </article>
           <article class="hotel-item">
             <div class="hotel-image"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Desert Quail Inn"></div>
-            <h3><a href="#">Desert Quail Inn</a></h3>
+            <h3 class="hotel-name"><a href="#">Desert Quail Inn</a></h3>
             <div class="hotel-description">
               <p>Мотель</p>
               <a href="#">Подробнее</a>
@@ -90,7 +90,7 @@
           </article>
           <article class="hotel-item">
             <div class="hotel-image"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Отель Amara Resort & Spa"></div>
-            <h3><a href="#">Villas at Poco Diablo</a></h3>
+            <h3 class="hotel-name"><a href="#">Villas at Poco Diablo</a></h3>
             <div class="hotel-description">
               <p>Апартаменты</p>
               <a href="#">Подробнее</a>
