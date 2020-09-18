@@ -3,6 +3,7 @@
 :root {
   --basic-white: #FFFFFF;
   --transparent-white: rgba(255, 255, 255, 0.3);
+  --light-transparent-white: rgba(255, 255, 255, 0.9);
   --basic-black: #000000;
   --transparent-black: rgba(0, 0, 0, 0.3);
   --basic-dark: #333333;
@@ -181,7 +182,7 @@ img {
 /* Footer */
 
 .main-footer {
-  background-color: var(--basic-white);
+  background-color: var(--light-transparent-white);
 }
 
 .footer-contacts,
