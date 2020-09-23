@@ -164,8 +164,15 @@ img {
   background-color: var(--basic-blue);
 }
 
+.advantage-image img {
+  display: block;
+}
+
 .features-list {
   background-color: var(--basic-white);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .advantage-item,
