@@ -54,6 +54,7 @@ img {
 }
 
 .content-wrapper {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 5px 15px var(--shadow-grey);
@@ -250,12 +251,28 @@ img {
   color: var(--basic-dark);
 }
 
+/* Map */
+
+.map {
+  position: relative;
+}
+
+.map img {
+  display: block;
+}
+
 /* Footer */
 
 .main-footer {
   background-color: var(--light-transparent-white);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 1200px;
+}
+
+.index-footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-contacts,
@@ -320,6 +337,13 @@ list-style: none;
 
 .hotels-sorting {
   border-bottom: 1px solid var(--silver-grey);
+  padding-right: 73px;
+  padding-left: 73px;
+}
+
+.hotels-sorting-content {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
 }
 
 .sorting-found {
@@ -332,24 +356,26 @@ list-style: none;
   line-height: 18px;
 }
 
-.sorting-list button {
-  font-family: inherit;
+.sorting-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+}
+
+.sorting-list a {
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
-  outline: none;
-  border: none;
   border-bottom: 1px dashed var(--basic-blue);
-  background-color: transparent;
   color: var(--transparent-black);
 }
 
-.sorting-list button:hover,
-.sorting-list button:focus {
+.sorting-list a:hover,
+.sorting-list a:focus {
   color: var(--basic-blue);
 }
 
-.sorting-list button:active {
+.sorting-list a:active {
   color: var(--basic-black);
   border: none;
 }
@@ -364,18 +390,16 @@ list-style: none;
   border: none;
 }
 
-.sorting-order button {
-  outline: none;
-  border: none;
+.sorting-order a {
   background-color: var(--blue-grey);
 }
 
-.sorting-order button:hover,
-.sorting-order button:focus {
+.sorting-order a:hover,
+.sorting-order a:focus {
   background-color: var(--basic-black);
 }
 
-.sorting-order button:active,
+.sorting-order a:active,
 .sorting-order .current,
 .sorting-order .current:hover,
 .sorting-order .current:focus,
@@ -385,7 +409,42 @@ list-style: none;
 
 .hotel-item {
   border-bottom: 1px solid var(--silver-grey);
+  display: grid;
+  grid-template-columns: 135px auto 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  align-items: start;
+  padding: 30px 73px;
 }
+
+.hotel-image {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+ }
+
+ .hotel-name {
+  grid-column: 2 / -2;
+  grid-row: 1 / 2;
+  margin-top: 0;
+ }
+
+ .hotel-description {
+  grid-column: 2 / 3;
+  grid-row: 2 / -1;
+ }
+
+ .hotel-booking {
+  grid-column: 3 / -2;
+  grid-row: 2 / -1;
+ }
+
+ .hotel-rating {
+  grid-column: -1 / -2;
+  grid-row: 1 / -1;
+ }
+
+ .hotel-image img {
+   display: block;
+ }
 
 .hotel-name a {
   font-weight: 700;
