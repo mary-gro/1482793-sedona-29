@@ -578,7 +578,7 @@ img {
 .hotels-sorting {
   border-bottom: 1px solid var(--silver-grey);
   padding-right: 73px;
-  padding-left: 73px;
+  padding-left: 74px;
   padding-bottom: 9px;
 }
 
@@ -598,17 +598,18 @@ img {
   font-size: 12px;
   line-height: 18px;
   margin-right: 40px;
+  padding-bottom: 4px;
 }
 
 .sorting-list {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .sorting-list li {
-  margin-right: 32px;
+  margin-right: 33px;
+  padding-bottom: 3px;
 }
 
 .sorting-list li:last-child {
@@ -618,7 +619,6 @@ img {
 .sorting-list a {
   font-size: 12px;
   line-height: 18px;
-  text-transform: uppercase;
   border-bottom: 1px dashed var(--basic-blue);
   color: var(--transparent-black);
 }
@@ -759,7 +759,7 @@ img {
 
 .hotel-description a {
   background-color: var(--basic-blue);
-  padding: 3px 16px 3px 17px;
+  padding: 3px 17px;
 }
 
 .hotel-description a:hover,
