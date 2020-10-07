@@ -110,6 +110,8 @@ img {
 
 .site-navigation li {
   width: 226px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .site-navigation li:nth-child(2) {
@@ -129,9 +131,6 @@ img {
 .site-navigation a {
   color: var(--basic-black);
   font-weight: 700;
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 .site-navigation a:hover,
@@ -379,6 +378,7 @@ img {
 .hotel-search {
   text-align: center;
   padding-top: 56px;
+  position: relative;
 }
 
 .search-title {
@@ -390,10 +390,10 @@ img {
 }
 
 .search-description {
-  line-height: 24px;
+  line-height: 25px;
   color: var(--basic-dark);
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 44px;
 }
 
 .hotel-search a {
@@ -418,13 +418,190 @@ img {
   color: var(--transparent-white);
 }
 
+.search-window {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 568px;
+  padding: 55px;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: var(--basic-white);
+}
+
+.search-window p {
+  position: relative;
+}
+
+.search-window label,
+.search-window input,
+.search-window input::placeholder {
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.search-window input {
+  box-sizing: border-box;
+  background-color: var(--basic-lighter);
+  border: none;
+  line-height: 26px;
+}
+
+.search-window input:hover {
+  background-color: var(--darkest-grey);
+}
+
+.search-window input:focus {
+  background-color: var(--basic-white);
+  outline: 2px solid var(--silver-grey);
+  outline-offset: -2px;
+}
+
+.field-from,
+.field-to {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.field-to {
+  margin-bottom: 30px;
+}
+
+.field-from input,
+.field-to input {
+  box-sizing: border-box;
+  width: 346px;
+  padding: 6px 30px 6px 13px;
+}
+
+.field-to input {
+  padding-left: 12px;
+}
+
+.form-search-calendar,
+.count-plus,
+.count-minus {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.form-search-calendar {
+  right: 15px;
+  top: 7px;
+  width: 21px;
+  height: 23px;
+}
+
+.count-plus {
+  right: 11px;
+  top: 11px;
+  width: 20px;
+  height: 20px;
+}
+
+.count-minus {
+  width: 15px;
+  height: 15px;
+  right: 92px;
+  top: 8px;
+}
+
+.form-search-calendar:hover path,
+.form-search-calendar:focus path,
+.count-plus:hover path,
+.count-plus:focus path,
+.count-minus:hover rect,
+.count-minus:focus rect {
+  fill: var(--basic-black);
+}
+
+.form-search-calendar:active path,
+.count-plus:active path,
+.count-minus:active rect {
+  fill: var(--basic-blue);
+}
+
+.field-people {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+
+.field-people p {
+  margin: 0;
+  position: relative;
+}
+
+.field-people input {
+  box-sizing: border-box;
+  width: 115px;
+  text-align: center;
+}
+
+.field-children {
+  text-align: right;
+}
+
+.field-adults label {
+  margin-right: 36px;
+}
+
+.field-adults input {
+  padding: 6px 39px;
+}
+
+.field-children input {
+  padding: 6px 38px;
+}
+
+.field-children label {
+  margin-right: 22px;
+}
+
+.search-button {
+  padding: 16px 182px 16px 181px;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  font-size: 21px;
+  text-transform: uppercase;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  outline: none;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: var(--darker-blue);
+}
+
+.search-button:active {
+  background-color: var(--darkest-blue);
+  color: var(--transparent-white);
+}
+
 /* Map */
 
-.map img {
-  display: block;
-  width: 1199px;
-  height: 594px;
+.map {
+  min-height: 594px;
   background-color: var(--darker-grey);
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+}
+
+.map iframe {
+  display: block;
+  border: none;
 }
 
 /* Footer */
@@ -444,6 +621,7 @@ img {
 
 .index-footer {
   margin-top: -120px;
+  z-index: 1;
 }
 
 .footer-contacts,
@@ -462,7 +640,7 @@ img {
   font-size: 21px;
   margin: 0;
   padding: 0;
-  padding-bottom: 9px;
+  padding-bottom: 7px;
 }
 
 .social-buttons {
