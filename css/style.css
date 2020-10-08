@@ -24,6 +24,8 @@
   --shadow-grey: rgba(0, 1, 1, 0.2);
   --blue-grey: #CACACA;
   --simple-grey: #666666;
+  --granit-grey: #ABABAB;
+  --transparent-grey: rgba(171, 171, 171, 0.3);
 }
 
 /* Global */
@@ -590,6 +592,13 @@ img {
   color: var(--transparent-white);
 }
 
+.search-button:hover,
+.form-search-calendar:hover,
+.count-plus:hover,
+.count-minus:hover {
+  cursor: pointer;
+}
+
 /* Map */
 
 .map {
@@ -710,7 +719,7 @@ img {
   background-color: var(--darkest-blue);
 }
 
-.social-button:active span::before {
+.social-button:active::before {
   opacity: 0.3;
 }
 
@@ -742,6 +751,214 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 8px;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1054px;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 31px;
+}
+
+.filter-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-form legend {
+  font: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+.filter-form label {
+  font: inherit;
+  line-height: 21px;
+  color: var(--basic-white);
+  cursor: pointer;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+}
+
+.infrastructure-options label {
+  padding-left: 38px;
+}
+
+.accomodation-options label {
+  padding-left: 42px;
+}
+
+.filter-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.filter-checkbox:disabled + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z' fill='%236A6A6A'/%3E%3C/svg%3E");
+}
+
+.filter-checkbox:checked + label::before {
+  width: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.28505 7.48601L4.45605 10.315L12.2391 18.098L26.1711 4.16601L23.3431 1.33701L12.2391 12.439L7.28505 7.48601Z' fill='white'/%3E%3Cpath d='M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.filter-checkbox:checked:disabled + label::before {
+  width: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z' fill='%236A6A6A'/%3E%3Cpath d='M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z' fill='%236A6A6A'/%3E%3C/svg%3E");
+}
+
+.filter-left {
+  display: flex;
+  justify-content: space-between;
+  min-width: 454px;
+}
+
+.filter-left legend {
+  margin-bottom: 25px;
+  margin-left: -1px;
+  padding: 0;
+}
+
+.filter-left fieldset {
+  box-sizing: border-box;
+  min-width: 200px;
+}
+
+.filter-left ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 114px;
+}
+
+.filter-form li {
+  padding-bottom: 1px;
+}
+
+.filter-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price-options legend {
+  margin-bottom: 11px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 317px;
+  padding: 2px 19px 5px 65px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+.price-controls::after  {
+  content: "";
+  position: absolute;
+  left: 157px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+}
+
+.price-controls input {
+  width: 60px;
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  color: var(--basic-white);
+  padding: 2px 0 3px;
+}
+
+.range-controls {
+  position: relative;
+  padding-top: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: var(--transparent-white);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--granit-grey);
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 var(--transparent-grey);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 80%;
+}
+
+.range-controls .toggle:hover,
+.range-controls .toggle:focus {
+  transform: scale(1.2);
+}
+
+.filter-button {
+  align-self: center;
+  padding: 5px 34px 6px;
+  margin-right: 9px;
+  margin-bottom: 1px;
+  font: inherit;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  outline: none;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  cursor: pointer;
 }
 
 /* Hotels Sorting */
@@ -865,6 +1082,7 @@ img {
   width: 135px;
   height: 90px;
   margin-right: 29px;
+  object-fit: contain;
  }
 
  .hotel-name {

@@ -28,7 +28,67 @@
 
         <section class="hotels-filter">
           <h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
-          <!-- Фильтр гостиниц -->
+          <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
+            <div class="filter-left">
+              <fieldset class="infrastructure-options">
+                <legend>Инфраструктура:</legend>
+                <ul>
+                  <li class="filter-option">
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
+                    <label for="filter-pool">Бассейн</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="parking" id="filter-parking" >
+                    <label for="filter-parking">Парковка</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="wifi" id="filter-wifi" >
+                    <label for="filter-wifi">Wi-Fi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="accomodation-options">
+                <legend>Тип жилья:</legend>
+                <ul>
+                  <li class="filter-option">
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="hotel" id="filter-hotel" checked>
+                    <label for="filter-hotel">Гостиница</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="motel" id="motel" checked>
+                    <label for="filter-motel">Мотель</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked>
+                    <label for="filter-apartments">Апартаменты</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="filter-right">
+              <fieldset class="price-options">
+                <legend>Стоимость в сутки (Р):</legend>
+                <div class="price-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      до <input type="number" name="max-price" value="3000">
+                    </label>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                </div>
+              </fieldset>
+              <button type="submit" class="filter-button">Показать</button>
+            </div>
+          </form>
         </section>
 
         <section class="hotels-sorting">
@@ -122,9 +182,9 @@
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-buttons">
-            <li><a class="social-button" href="#"><span class="twitter"></span></a></li>
-            <li><a class="social-button" href="#"><span class="facebook"></span></a></li>
-            <li><a class="social-button" href="#"><span class="youtube"></span></a></li>
+            <li><a class="social-button twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+            <li><a class="social-button facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-button youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
           </ul>
         </section>
         <p class="footer-copyright">
