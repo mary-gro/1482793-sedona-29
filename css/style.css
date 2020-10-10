@@ -652,6 +652,13 @@ img {
   padding-bottom: 7px;
 }
 
+.footer-phone a,
+.footer-phone a:hover,
+.footer-phone a:focus {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
 .social-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -827,6 +834,10 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z' fill='%236A6A6A'/%3E%3Cpath d='M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z' fill='%236A6A6A'/%3E%3C/svg%3E");
 }
 
+.filter-checkbox:focus + label {
+  text-decoration: underline;
+}
+
 .filter-left {
   display: flex;
   justify-content: space-between;
@@ -937,6 +948,7 @@ img {
 .range-controls .toggle:hover,
 .range-controls .toggle:focus {
   transform: scale(1.2);
+  outline: none;
 }
 
 .filter-button {
