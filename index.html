@@ -93,8 +93,8 @@
           <h2 class="visually-hidden">Забронировать гостиницу в Седоне</h2>
           <p class="search-title">Заинтересовались?</p>
           <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <a href="#">Поиск гостиницы в Седоне</a>
-          <form class="search-window" action="https://echo.htmlacademy.ru/" method="post">
+          <a class="search-link" href="#">Поиск гостиницы в Седоне</a>
+          <form class="search-window search-window-show" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-from">
               <label for="arrival-date">Дата заезда:</label>
               <input id="arrival-date" type="text" name="date-from" placeholder="24 апреля 2017">
@@ -108,13 +108,13 @@
             <div class="field-people">
               <p class="field-adults">
                 <label for="adult-quantity">Взрослые:</label>
-                <input id="adult-quantity" type="text" name="adults" placeholder="2">
+                <input id="adult-quantity" type="text" name="adults" value="2">
                 <button type="button" class="count-plus" aria-label="Добавить взрослого"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/></svg></button>
                 <button type="button" class="count-minus" aria-label="Убрать взрослого"><svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="3" fill="#A9A9A9"/></svg></button>
               </p>
               <p class="field-children">
                 <label for="children-quantity">Дети:</label>
-                <input id="children-quantity" type="text" name="children" placeholder="0">
+                <input id="children-quantity" type="text" name="children" value="0">
                 <button type="button" class="count-plus" aria-label="Добавить ребенка"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/></svg></button>
                 <button type="button" class="count-minus" aria-label="Убрать ребенка"><svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="3" fill="#A9A9A9"/></svg></button>
               </p>
@@ -153,6 +153,6 @@
       </footer>
 
     </div>
-
+    <script src="js/search.js"></script>
   </body>
 </html>
