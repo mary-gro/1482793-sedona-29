@@ -15,8 +15,6 @@ function checkLocalStorage() {
 
 let isStorageSupport = checkLocalStorage();
 
-dateFrom.focus();
-
 if (localStorage.getItem("adults") !== null) {
   quantityAdults.value = localStorage.getItem("adults");
 }

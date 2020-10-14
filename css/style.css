@@ -615,6 +615,8 @@ img {
   min-height: 594px;
   background-color: var(--darker-grey);
   background-image: url("../img/map.jpg");
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -767,6 +769,7 @@ img {
   background-color: var(--darkest-blue);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   margin-bottom: 8px;
 }
 
@@ -869,12 +872,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 114px;
 }
 
 .filter-form li {
-  padding-bottom: 1px;
+  margin-bottom: 25px;
+}
+
+.filter-form li:last-child {
+  margin-bottom: 0;
 }
 
 .filter-right {
