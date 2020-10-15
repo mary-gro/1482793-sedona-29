@@ -5,6 +5,8 @@ const dateTo = searchWindow.querySelector("[name=date-to]");
 const quantityAdults = searchWindow.querySelector("[name=adults]");
 const quantityChildren = searchWindow.querySelector("[name=children]");
 
+searchWindow.classList.add("search-window-js");
+
 function checkLocalStorage() {
   try {
     return "localStorage" in window && window["localStorage"] !== null;
@@ -26,6 +28,7 @@ if (localStorage.getItem("children") !== null) {
 searchLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchWindow.classList.toggle("search-window-show");
+  dateFrom.focus();
 });
 
 searchWindow.addEventListener("submit", function (evt) {
