@@ -5,7 +5,7 @@
     <title>Каталог отелей - HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -57,7 +57,7 @@
                     <label for="filter-hotel">Гостиница</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-checkbox visually-hidden" type="checkbox" name="motel" id="motel" checked>
+                    <input class="filter-checkbox visually-hidden" type="checkbox" name="motel" id="filter-motel" checked>
                     <label for="filter-motel">Мотель</label>
                   </li>
                   <li class="filter-option">
@@ -73,10 +73,10 @@
                 <div class="price-filter">
                   <div class="price-controls">
                     <label class="min-price">
-                      от <input type="number" name="min-price" value="0">
+                      от <input type="text" name="min-price" value="0">
                     </label>
                     <label class="max-price">
-                      до <input type="number" name="max-price" value="3000">
+                      до <input type="text" name="max-price" value="3000">
                     </label>
                   </div>
                   <div class="range-controls">
@@ -180,7 +180,7 @@
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="footer-hashtag">#visitSEDONA</p>
-          <p class="footer-phone">ТЕЛ: <a href="tel: +74956660166">+7(495) 666-01-66</a></p>
+          <p class="footer-phone">ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
         </section>
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
